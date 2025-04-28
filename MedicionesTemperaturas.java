@@ -1,5 +1,7 @@
 import java.util.ArrayList; 
 
+
+
 /**
  * Registros de temperaturas diarios de una estacion meteorológica
  * 
@@ -60,4 +62,20 @@ public class MedicionesTemperaturas
         }
     }
     
-}
+    /** 
+     *  Cuenta la cantidad de temperaturas extremas
+     *
+    **/
+    public int cantTemperaturasExtremas() {
+        int  tepEx = 0;
+        
+        for (Integer temperatura : registros) {
+        
+        if (temperatura > 35 || temperatura < -15  ){ 
+            tepEx = tepEx + 1;
+            
+        }
+        } 
+        return tepEx;
+    }
+    }
